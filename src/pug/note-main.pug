@@ -1,0 +1,110 @@
+append vars
+	- supportedDev = ['Note8', 'Note5', 'S8+', 'S8', 'S7 Edge', 'S7', 'A7 (2016, 2017)', 'A5 (2016, 2017)', 'A3 (2017)', 'J7 (2017)', 'J5 (2017)', 'S6 Edge+', 'S6 Edge', 'S6']
+main.main
+	div.container
+		div.main-content
+			div.main-content__note
+				article.note
+					div.note__header
+						div.note__date 13 декабря
+						h2.note__title Samsung Pay или Android Pay: что лучше использовать
+						div.note__header-line
+							div.note__header-item
+								a.btn.note__btn Программы
+								a.btn.note__btn FAQ
+								div.socio
+									div.socio__footer-wrap
+										div.socio__foot-item
+											span.fas.fa-eye
+											span.socio__foot-text 1 563
+										a.socio__foot-item
+											span.fas.fa-comment
+											span.socio__foot-text 15
+							div.note__header-item
+								div.note__author 
+									p.note__author-text  Автор:
+									p.note__author-fio Сергей Караван
+
+					div.note__content
+						img.note__poster(src='../images/note-poster-1.png')
+
+					div.note__content
+						p.note__paragraph В качестве способов оплаты покупок и услуг люди каждый день используют наличные денежные средства и пластиковые карточки. Первые достаточно серьёзно укоренились среди населения, поэтому вряд ли в ближайшие сотни лет уйдут из повседневной жизни. А вот вторые могут поступиться своим местом более современным вариантам. Уже сейчас крупные IT-гиганты внедряют в массы новые удобные сервисы, которые позволяют расплатиться в торговых точках с помощью мобильных устройств, оснащённых NFC-чипами. Такие решения избавляют от необходимости носить с собой десяток карт и в какой-то степени являются более защищёнными способами оплаты в отличии от пластика. Для мобильных устройств от Samsung есть сразу два платёжных сервиса — Samsung Pay и Android Pay. И тут же появляется вопрос: какой из них лучше. Мы подготовили несколько категорий, по которым вы можете определить, какой из доступных платёжных сервисов наилучшим образом подходит для использования на ваших «галактических» девайсах.
+
+					div.note__content
+						h3.note__title-1 Содержание
+						ol.note__scroll.scroll
+							each item in scroll
+								li.scroll__item
+									a.scroll__link(href=item.href)=item.text
+						p.note__paragraph Для двух последних моделей приложение данного сервиса поставляется лишь с возможностью проводить денежные операции посредством NFC. Помимо мобильных устройств, поддержкой платёжной системы южнокорейской компании обладает и носимая электроника: Samsung Gear S2, S3 и Sport. Но, как и в случае со смартфонами, MST обладают не все из перечисленных. Если конкретнее, данная технология отсутствует в часах Gear Sport.
+
+					div.note__content
+						h3.note__title-1 Добавление карты
+						p.note__paragraph Даже такой процесс, как добавление карт, по-разному реализован в платёжных приложениях от Samsung и Google. Первое предлагает сканировать карту с помощью основной камеры устройства и взять с неё такую информацию, как номер и срок действия. Остальные данные (код проверки подлинности, ФИО владельца латиницей и другие) Samsung Pay требует ввести вручную. В случае же с Android Pay пользователю необходимо самостоятельно вбить всю информацию по карте. Никаких фич, немного упрощающих её добавление, нет. Это касается внесения не только дебетовых и кредитных карт, но и пластика с подарочными предложениями, скидками и бонусами. Зато сервис от Google позволяет работать с неограниченным количеством карт, в то время как система от Samsung — лишь с десятью.
+
+					div.note__content
+						img.note__poster(src='../images/note-poster-2.png')
+						span.note__short-text В Android Pay можно добавить неограниченное число карт
+
+					div.note__content
+						h3.note__title-1 Поддерживаемые места оплаты
+						p.note__paragraph Платёжный сервис Google предоставляет возможность расплатиться за покупки и услуги только в местах, оборудованных терминалами с поддержкой бесконтактной оплаты. Обычно такие точки можно определить по наклейкам с соответствующими пиктограммами, по наличию диодов на устройствах для проведения платежей или по сообщению на их дисплеях с предложением поднести карту. В то же время решение от Samsung позволяет проводить платежи даже через обычные терминалы. Всё благодаря технологии MST, которая генерирует динамическое поле из переменного тока, эмулирующее магнитную ленту. Радиус его действия составляет порядка 8 сантиметров
+						blockquote.note__blockquote Звучит отлично, но есть один нюанс —  далеко не все устройства южнокорейской компании с Samsung Pay на борту обладают данной технологией.
+					div.note__content
+						h3.note__title-1 Поддерживаемые устройства
+						ul.note__list
+							each item in supportedDev
+								li.note__list-item=item
+						img.note__poster(src='../images/note-poster-3.png')
+						span.note__short-text Устройства, поддерживающие Samsung Pay
+					div.note__content
+						p.note__paragraph С Android Pay ситуация более радужная, так как для его полноценной работы устройство должно обладать лишь NFC и работать под управлением системы Android не ниже версии 4.4 или же Android Wear 2.0 в случае со смарт-часами. Наличие специальных чипов с защищённым хранилищем не требуется. Поэтому этот сервис легко заводится даже на флагмане 2013 года — Samsung Galaxy S4. Несмотря на то что Samsung Pay лидирует практически во всех рассмотренных сценариях, Android Pay подкупает расширенным перечнем поддерживаемых устройств. Решить, каким именно платёжным сервисом пользоваться, можете только вы. Подчеркнём, что для их функционирования ваши аппараты должны работать под управлением официальных прошивок без следов рутирования и модификаций.
+
+
+			div.main-content__aside.sidebar
+				div.posts.sidebar__item
+					div.sidebar__title
+						span.sidebar__title-text Популярные записи
+						span.sidebar__title-icon
+							img(src='../images/sidebar_fire.png')
+					div.sidebar__content
+						ul.sidebar__list
+							each item in posts
+								li.sidebar__list-item
+									a.sidebar__link(href=item.href)
+										div.sidebar__poster
+											img(src=item.img)
+										div.sidebar__link-content
+											span.sidebar__link-title=item.title
+											div.sidebar__socio.socio
+												div.socio__footer-wrap
+													div.socio__foot-item
+														span.fas.fa-eye
+														span.socio__foot-text=item.views
+													div.socio__foot-item
+														span.fas.fa-comment
+														span.socio__foot-text=item.comments
+				div.vkontakte.sidebar__item
+					div.sidebar__title
+						span.sidebar__title-text Мы вконтакте
+						span.sidebar__title-icon.fab.fa-vk
+					div.sidebar__content
+
+
+
+				div.info.sidebar__item
+					div.sidebar__title
+						span.sidebar__title-text Информация о нас
+						span.sidebar__title-icon.fas.fa-info-circle
+					div.sidebar__content
+						p.sidebar__text='Этот проект создан с одной целью - объединить всех пользователей устройств от компании Samsung, производимой под маркой Galaxy. Здесь каждый найдет себе все самое нужное: игры для android, программы, темы и обои. Также для каждого смартфона имеются свежие прошивки.'
+				div.advertising.sidebar__item
+					img.advertising__poster(src='../images/advertising-1.png')
+					span.advertising__title='Пример рекламного блока'
+				div.advertising.sidebar__item
+					img.advertising__poster(src='../images/advertising-2.png')
+					span.advertising__title='Пример рекламного блока'
+				div.advertising.sidebar__item
+					img.advertising__poster(src='../images/advertising-3.png')
+					span.advertising__title='Пример рекламного блока'
