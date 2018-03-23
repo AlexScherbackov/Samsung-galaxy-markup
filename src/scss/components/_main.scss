@@ -1,0 +1,12 @@
+.main{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.main-content{
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-column-gap: 15px;
+	@include max-screen(767px){
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,0 +1,61 @@
+.main-foot{
+	background: $darc-violet_cl;
+	color: $color-white;
+	padding: 50px 0;
+	&__logo-wrapp{
+		@include max-screen (991px){
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			margin-bottom: 30px;
+		}
+	}
+	&__logo{
+		width: 220px;
+	}
+	&__subtitle{
+		font-family: $roboto;
+		font-size: em(14px);
+		font-weight: 400;
+		letter-spacing: 0.35px;
+		margin-top: 20px;
+	}
+	&__text{
+		margin: 0;
+		font-family: $roboto;
+		font-weight: 300;
+		font-size: em(14px);
+		line-height: 1.8;
+		letter-spacing: 0.7px;
+		margin-top: -5px;
+	}
+}
+
+.navigator-foot{
+	&__list{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		height: 140px;
+		@include max-screen (991px){
+			margin-bottom: 30px;
+		}
+
+	}
+	&__link{
+		color: $color-white;
+		font-family: $roboto;
+		font-weight: 300;
+		font-size: em(14px);
+		line-height: 14px;
+		letter-spacing: 0.7px;
+		transition: all ease 0.2s;
+		position: relative;
+
+		&:hover, &:focus{
+			text-decoration: underline;
+		}
+	}	
+}

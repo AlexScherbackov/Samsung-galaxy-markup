@@ -6,4 +6,41 @@
 
 html {
 	box-sizing: border-box;
+	line-height: 1.15;
+
+}
+
+body{
+	overflow-x: hidden;
+	min-width: 320px;
+	width: 100%;
+	color: $color-black;
+	font-size: em(16px);
+	margin: 0;
+	line-height: 1.75;
+	position: relative;
+	display: block;
+	background: $gray_cl1;
+}
+article, aside, footer, header, nav, section {
+ display: block;
+}
+
+a{
+	display: block;
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+	&:focus,&:hover{
+		outline: none;
+	}
+}
+ul,ol{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.open{
+	display: block!important;
 }

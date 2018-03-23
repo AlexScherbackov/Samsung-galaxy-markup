@@ -1,0 +1,17 @@
+footer.main-foot
+	div.container
+		div.row
+			div.col-lg-3.col-md-12.col-sm-12
+				div.main-foot__logo-wrapp
+					a.main-foot__logo 
+						img(src='images/Лого.png')
+					p.main-foot__subtitle='Окунись в чудесный мир Galaxy'
+			div.col-lg-3.col-md-12.col-sm-6
+				nav.main-foot__nav.navigator-foot
+					ul.navigator-foot__list
+						each item in footerMenu
+							li.navigator-foot__item
+								a.navigator-foot__link(href=item.href)=item.text
+
+			div.col-lg-5.col-md-12.offset-lg-1
+				p.main-foot__text © 2018 Samsung-Galaxy.mobi. Сайт посвящен смартфонам и планшетам марки Samsung Galaxy. Эдакое сообщество всех любителей Galaxy Note, Samsung Galaxy S, S2, S3, Tab, Ace и им подобных. У нас вы можете посмотреть обзоры многих игр для Android, с также скачать все необходимые приложения и прошивки.

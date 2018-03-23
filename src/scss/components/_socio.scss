@@ -1,0 +1,19 @@
+.socio{
+	color: $gray_cl2;
+	&__footer-wrap{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+	}
+	&__foot-item{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: em(12px);
+	}
+	&__foot-text{
+		margin-left: 10px;
+		display: block;
+	}
+}

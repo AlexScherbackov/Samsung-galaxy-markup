@@ -1,0 +1,165 @@
+.top-line{
+	background: $blue_cl1;
+	min-height: 45px;
+	width: 100%;
+	@include max-screen(991px){
+		padding: 20px 0;
+	}
+	&__wrap{
+		@include max-screen(991px){
+			flex-wrap: wrap;
+			//justify-content: center!important;
+		}
+	}
+	&__logo{
+		@include max-screen(991px){
+			margin-bottom: 20px;
+		}
+	}
+    &__mobile-btn{
+        display: none;
+        z-index: 300;
+        margin-left: 60px;
+        @include max-screen(991px){
+            display: block;
+        }
+        @include max-screen(767px){
+			margin-left: 20px;
+        }
+    }
+    &__form{
+		@include max-screen(480px){
+		 	margin-top: 10px;
+		}
+	}
+}
+
+.navigator{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 300px;
+	@include max-screen(991px){
+		width: 100%;
+	}
+}
+
+.menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	@include max-screen(480px){
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	&__item{
+
+	}
+	&__link{
+		font-size: em(14px);
+		font-family: $roboto;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: $color-white;
+		height: 45px;
+		line-height: 45px;
+		text-align: center;
+		letter-spacing: 1.05px;
+		padding: 0 30px;
+        @include max-screen(767px){
+            font-size: em(12px);
+            padding: 0 10px;
+        }
+        @include max-screen(480px){
+        	padding: 0 5px;
+        }
+		&:hover, &:focus{
+			background: rgba($color-black, 0.2);
+		}
+	}
+	
+}
+
+.head-form{
+	padding: 0 0 0 5px;
+	position: relative;
+	color: $color-white;
+	&__input{
+		max-width: 270px;
+		width: 100%;
+		background: rgba($color-black, 0.2);
+        color: $color-white;
+		border: none;
+		border-radius:20px;
+		padding: 5px 20px;
+		letter-spacing: 1.05px;
+		font-family: $roboto;
+		font-weight: 300;
+		font-size: em(14px);
+
+		&::-webkit-input-placeholder{
+			color: $color-white;
+		}
+		&::-moz-placeholder{
+			color: $color-white;
+		}
+		&:-moz-placeholder{
+			color: $color-white;
+		}
+		&:-ms-input-placeholder{
+			color: $color-white;
+		}
+	}
+	&__label{
+		position: absolute;
+		top: 6px;
+		right: 15px;
+		font-size: em(12px);
+	}
+}
+
+.mobile-btn{
+    position: relative;
+    height: 40px;
+    width: 35px;
+    
+    &.close{
+    	.mobile-btn__item:before{
+    		opacity: 0;
+    		left: -60px;
+    	}
+    	.mobile-btn__item{
+    		transform: rotate(135deg);
+    	}
+    	.mobile-btn__item:after{
+			transform: rotate(-270deg);
+			top:0px;
+			left: 0px;
+    	}
+    }
+    &__item{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $color-white;
+        top: 6px;
+        transition: all ease 0.3s;
+        cursor: pointer;
+        &:before,&:after{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: $color-white;
+        }
+        &:before{
+            top: -10px
+        }
+        &:after{
+            top: 10px;
+        }
+    }
+}

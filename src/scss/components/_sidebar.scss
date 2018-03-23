@@ -1,0 +1,84 @@
+.sidebar{
+	@include max-screen(767px){
+		display: none;
+	}
+	&__item{
+		border-radius: 4px;
+		background: $color-white;
+		margin-bottom: 30px;
+	}
+	&__title{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 15px ;
+		background: $blue_cl2;
+		color: $color-white;
+		border-radius: 4px 4px 0 0;
+	}
+	&__title-text{
+		font-family: $roboto;
+		font-weight: 300;
+		font-size: em(14px);
+		line-height: 18px;
+		letter-spacing: 0.7px;
+		text-transform: uppercase;
+	}
+	&__title-icon{
+		color: $color-white;
+	}
+	&__link{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px;
+
+	}
+
+	&__link-content{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	&__link-title{
+		display: block;
+		font-family: $roboto;
+		font-weight: 400;
+		font-size: em(13px);
+		line-height: 18px;
+		letter-spacing: 0;
+		color: $black_cl2;
+	}
+	&__text{
+		padding: 15px;
+		font-family: roboto;
+		font-weight: 400;
+		font-size: em(14px);
+		line-height: 18px;
+		letter-spacing: 0;
+		color: $black_cl2;
+		margin: 0;
+	}
+}
+
+.advertising{
+	position: relative;
+	&__poster{
+		display: block;
+		object-fit: cover;
+	}
+	&__title{
+		position: absolute;
+		bottom: 10px;
+		left: 50px;
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+		color: $color-white;
+		width: 172px;
+		font-family:  roboto;
+		font-weight: 700;
+		font-size: em(16px);
+		line-height: 18px;
+		letter-spacing: 0;
+	}
+}

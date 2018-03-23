@@ -1,0 +1,73 @@
+main.main
+	div.container
+		div.main-content
+			div.main-content__blog.blog
+				each item in blogCard
+					div.blog__item
+						div.blog__content
+							div.blog__poster
+								img.blog__image(src=item.img)
+								a.blog__link
+									span.blog__arrow
+							div.blog__text-content
+								div.blog__date=item.date
+								h3.blog__title=item.title
+								p.blog__text=item.content
+						div.blog__footer.socio
+							div.socio__footer-wrap
+								div.socio__foot-item
+									span.fas.fa-eye
+									span.socio__foot-text=item.views
+								a.socio__foot-item
+									span.fas.fa-comment
+									span.socio__foot-text=item.comments
+								div.socio__foot-item
+									a.socio__foot-btn Подробнее...
+
+
+			div.main-content__aside.sidebar
+				div.posts.sidebar__item
+					div.sidebar__title
+						span.sidebar__title-text Популярные записи
+						span.sidebar__title-icon
+							img(src='../images/sidebar_fire.png')
+					div.sidebar__content
+						ul.sidebar__list
+							each item in posts
+								li.sidebar__list-item
+									a.sidebar__link(href=item.href)
+										div.sidebar__poster
+											img(src=item.img)
+										div.sidebar__link-content
+											span.sidebar__link-title=item.title
+											div.sidebar__socio.socio
+												div.socio__footer-wrap
+													div.socio__foot-item
+														span.fas.fa-eye
+														span.socio__foot-text=item.views
+													div.socio__foot-item
+														span.fas.fa-comment
+														span.socio__foot-text=item.comments
+				div.vkontakte.sidebar__item
+					div.sidebar__title
+						span.sidebar__title-text Мы вконтакте
+						span.sidebar__title-icon.fab.fa-vk
+					div.sidebar__content
+
+
+
+				div.info.sidebar__item
+					div.sidebar__title
+						span.sidebar__title-text Информация о нас
+						span.sidebar__title-icon.fas.fa-info-circle
+					div.sidebar__content
+						p.sidebar__text='Этот проект создан с одной целью - объединить всех пользователей устройств от компании Samsung, производимой под маркой Galaxy. Здесь каждый найдет себе все самое нужное: игры для android, программы, темы и обои. Также для каждого смартфона имеются свежие прошивки.'
+				div.advertising.sidebar__item
+					img.advertising__poster(src='../images/advertising-1.png')
+					span.advertising__title='Пример рекламного блока'
+				div.advertising.sidebar__item
+					img.advertising__poster(src='../images/advertising-2.png')
+					span.advertising__title='Пример рекламного блока'
+				div.advertising.sidebar__item
+					img.advertising__poster(src='../images/advertising-3.png')
+					span.advertising__title='Пример рекламного блока'
