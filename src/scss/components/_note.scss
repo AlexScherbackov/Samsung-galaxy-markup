@@ -1,4 +1,351 @@
 .note{
-	padding: 40px 50px;
+	padding: 20px 50px;
 	background: $color-white;
+	@include max-screen(670px){
+		padding: 20px 25px;	
+	}
+	@include max-screen(480px){
+		padding: 10px 15px;	
+	}
+	&__content{
+		position: relative;
+	}
+	&__article{
+		& > *{
+			font-family: $roboto;
+			font-weight: 300;
+			font-size: em(16px);
+			letter-spacing: 0.8px;
+			line-height: 24px;
+			color: $black_cl2;
+			
+		}
+		& > h2{
+			margin-top: 30px;
+			margin-bottom: 30px;
+			font-weight: 700;
+			font-size: em(24px);
+			letter-spacing: 1.2px;
+			@include max-screen(991px){
+				font-size: em(18px);
+			}
+		}
+		& > h3{
+			margin-top: 15px;
+			margin-bottom: 15px;
+			font-weight: 700;
+			font-size: em(20px);
+			letter-spacing: 1px;
+			@include max-screen(991px){
+				font-size: em(16px);
+			}
+		}
+
+		& > * a{
+			display: inline-block;
+			color: $blue_cl2;
+			text-decoration: underline;
+		}
+		
+		& > .wp-caption{
+			margin: 50px 0;
+			&.alignleft{
+				float: left;
+			}
+			&.aligncenter{
+				margin: 50px auto;
+			}
+			&.alignright{
+				float: right;
+			}
+			& > a{
+				display: block;
+			}
+
+			& > .wp-caption-text{
+				margin: 0;
+			}
+		}
+		& > .fotorama__wrap{
+			width: 100% !important;
+		}
+		& > blockquote{
+			position: relative;
+			display: block;
+			background: $gray_cl3;
+			padding: 15px 30px;
+			margin: 30px 0;
+			@include max-screen(480px){
+				padding: 8px 15px;
+			}
+			&:before{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 10;
+				background: $blue_cl2;
+				display: block;
+				height: 100%;
+				width: 4px;
+			}
+		}
+		& > ul{
+			display: flex;
+			flex-direction: column;
+			& > li{
+				position: relative;
+				display: block;
+				padding-left: 60px;
+				@include max-screen(480px){
+					padding-left: 30px;
+				}				
+				&:before{
+					content: '';
+					display: block;
+					position: absolute;
+					top: 4px;
+					left: 0;
+					background-image: url('./images/list-circle.png');
+					background-size: cover;
+					background-repeat: no-repeat;
+					z-index: 10;
+					width: 15px;
+					height: 15px;
+
+				}
+			}
+		}
+	}
+	&__date{
+		font-family: $roboto;
+		font-size: em(16px);
+		font-weight: 400;
+		letter-spacing: 0.8px;
+		color: $gray_cl2;
+	}
+	&__title{
+		font-family: $roboto;
+		font-weight: 700;
+		font-size: em(30px);
+		letter-spacing: 1.5px;
+		line-height: 42px;
+		color: $black_cl2;
+		margin: 15px 0;
+		@include max-screen(991px){
+			font-size: em(22px);
+			line-height: 32px;
+		}
+	}
+	&__header-line{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 50px;
+		@include max-screen(480px){
+			flex-direction: column;
+		}
+	}
+	&__header-item{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		&>*{
+			margin-right: 20px;
+		}
+	}
+	&__categori{
+		display: flex;
+	}
+	&__poster{
+		object-fit: cover;
+		max-width: 800px;
+		max-height: 325px;
+		width: 100%;
+		height: auto;
+	}
+	&__btn{
+		display: block;
+		//height: 45px;
+		background: $blue_cl2;
+		border-radius: 20px;
+		padding: 5px 10px ;
+		font-family: $roboto;
+		font-weight: 300;
+		font-size: em(14px);
+		letter-spacing: 0.7px;
+		line-height: 22px;
+		color: $color-white;
+		text-align: center;
+		margin-right: 10px;
+		&:last-child{
+			margin-right: 0;
+		}
+		&:hover, &:focus{
+			background: rgba($blue_cl2, 0.6);
+		}
+	}
+	&__socio{
+		width: 120px;
+		@include max-screen(991px){
+			width: 90px;
+		}
+	}
+	&__author{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: $roboto;
+		font-size: em(16px);
+		letter-spacing: 0.8px;
+		margin: 0;
+		&>*{
+			margin: 0;
+			width: 100%;
+			text-align: right;
+			line-height: 20px;
+		}
+		@include max-screen(480px){
+			flex-direction: row;
+			margin-top: 20px;
+		}
+	}
+	&__author-text{
+		font-weight: 300;
+		color: $gray_cl2;
+	}
+	&__author-fio{
+		font-weight: 400;
+		color: $black_cl2;
+	}
+	&__404{
+		height: auto;
+		width: 100%;
+	}
+}
+
+
+#toc_container.no_bullets{
+	background-color: transparent;
+	border: none;
+	margin: 50px 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	& >.toc_title{
+		margin: 0;
+		font-family: $roboto;
+		font-weight: 700;
+		font-size: em(24px);
+		line-height: 24px;
+		letter-spacing: 1.2px;
+		text-align: left;
+		margin-bottom: 20px;
+		& > .toc_toggle{
+			display: none;
+			@include max-screen(991px){
+				display: block;
+			}
+		}
+	}
+	& > .toc_list_2col{
+		width: 100%;
+	}
+	& > * > .toc_list{
+		margin: 0;
+		
+
+		& > li{
+			margin: 0;
+			&:nth-child(odd){
+				background: none!important;
+			}
+			& > a{
+				display: block;
+				position: relative;
+				font-family: $roboto;
+				font-weight: 400;
+				font-size: em(16px);
+				line-height: 50px;
+				//letter-spacing: 0.8px;
+				color: $black_cl2;
+				height: auto;
+				&:before{
+					content: '';
+					height: 100%;
+					width: 4px;
+					background: $blue_cl2;
+					position: absolute;
+					left: 0;
+					display: none;
+				}
+				&:hover,&:focus{
+					text-decoration: none;
+					background: $gray_cl3;
+					&:before{
+						display: block;
+					}
+				}
+				& > .toc_number{
+					display: inline-block;
+					font-weight: 700;
+					font-size: em(24px);
+					line-height: 32px;
+					width: 50px;
+					text-align: center;
+				}
+				@include max-screen(480px){
+					font-size: em(14px);
+					line-height: 16px;
+
+				}
+			}
+		}
+	}
+
+}
+
+.main_box{
+	width: 100%;
+	margin-top: 100px;
+}
+
+.box-fab{
+	&-list{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&-search-author-link{
+		background-color: transparent!important;
+		font-family: $roboto;
+		font-size: em(16px)!important;
+		letter-spacing: 0.8px;
+		margin: 0!important;
+		border: none!important;
+		font-weight: 300;
+		color: $gray_cl2!important;
+
+		& > a{
+			font-weight: 400;
+			color: $black_cl2;
+			display: inline-block;
+
+		}
+	}
+}
+
+#print-content>.box_author{
+	border: none!important;
+}
+
+.yarpp{
+	&-heading{
+		font-weight: 700;
+		font-size: em(20px);
+		letter-spacing: 1px;
+	}
+	&-thumbnail-title{
+		color: $black_cl2;
+	}
 }

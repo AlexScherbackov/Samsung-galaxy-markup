@@ -7,6 +7,7 @@
 @import "fonts";
 @import "vendor";
 @import "base";
+@import "./components/preloader.scss";
 @import "./components/mobile-menu.scss";
 @import "./components/top-line.scss";
 @import "./components/main-menu.scss";
@@ -15,4 +16,6 @@
 @import "./components/socio.scss";
 @import "./components/sidebar.scss";
 @import "./components/note.scss";
+@import "./components/pagination.scss";
+@import "./components/helpers.scss";
 @import "./components/footer.scss";

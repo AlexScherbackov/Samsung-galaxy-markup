@@ -1,0 +1,15 @@
+.helpers{
+	&__title{
+		font-family: $roboto;
+		font-weight: 700;
+		font-size: em(30px);
+		letter-spacing: 1.5px;
+		line-height: 42px;
+		color: $black_cl2;
+		margin: 15px 0;
+		@include max-screen(991px){
+			font-size: em(22px);
+			line-height: 32px;
+		}
+	}
+}

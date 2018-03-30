@@ -1,0 +1,38 @@
+			<div class="note__header-line">
+									<div class="note__header-item">
+										<div class="note__categori">
+
+											<?php 
+
+											foreach( get_the_category() as $category ){ 
+												echo '<a class="btn note__btn">'. $category->cat_name .'</a>' ; 
+											};  
+											?>
+
+										</div>
+										<div class="socio note__socio">
+											<div class="socio__footer-wrap">
+												<div class="socio__foot-item">
+													<span class="fas fa-eye"></span>
+													<span class="socio__foot-text"><?php echo getPostViews(get_the_ID()); ?></span>
+												</div>
+												<a class="socio__foot-item">
+													<span class="fas fa-comments"></span>
+													<span class="socio__foot-text">
+														<?php
+														$id = get_the_ID();
+														$comments_count = wp_count_comments($id);
+														echo $comments_count->approved;
+														?>
+													</span>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="note__header-item">
+										<div class="note__author"> 
+											<p class="note__author-text"> Автор:</p>
+											<p class="note__author-fio"><?php the_author(); ?></p>
+										</div>
+									</div>
+								</div>

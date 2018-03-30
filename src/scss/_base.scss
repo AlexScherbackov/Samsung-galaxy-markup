@@ -19,7 +19,8 @@ body{
 	margin: 0;
 	line-height: 1.75;
 	position: relative;
-	display: block;
+	display: flex;
+	flex-direction: column;
 	background: $gray_cl1;
 }
 article, aside, footer, header, nav, section {
@@ -41,6 +42,16 @@ ul,ol{
 	padding: 0;
 }
 
+img{
+	max-width: 100%;
+	height: auto;
+}
+
 .open{
 	display: block!important;
+}
+
+@keyframes bg{
+	from {background-color: $darc-violet_cl;}
+	to {background-color: $blue_cl2;}
 }

@@ -1,6 +1,6 @@
 div.top-line.d-flex.align-items-center
 		div.container.d-flex.justify-content-between.align-items-center.top-line__wrap
-			a.top-line__logo
+			a.top-line__logo.animated.fadeInLeft
 				img(src='images/Лого.png')
 			div.top-line__mobile-btn.mobile-btn#mobile-btn
 				span.mobile-btn__item
@@ -8,10 +8,10 @@ div.top-line.d-flex.align-items-center
 				ul.top-line__menu.menu
 					each item in toplineList
 						if(item.type == 'link')
-							li.menu__item
+							li.menu__item.animated.fadeInRight
 								a.menu__link(href=item.href)=item.text
 						else if(item.type == 'input')
-							li.menu__item
+							li.menu__item.animated.fadeInRight
 								form.top-line__form.head-form
 									label.head-form__label
 										span.fas.fa-search

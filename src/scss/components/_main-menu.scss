@@ -8,7 +8,13 @@
 		justify-content: space-between;
 		align-items: center;
 		height: auto;
-		
+	}
+	&__item{
+		@for $i from 1 through 10{
+			&:nth-child(#{$i}){
+				animation-delay: 1.5s*($i/6);
+			}
+		}
 	}
 	&__link{
 		color: $color-black;

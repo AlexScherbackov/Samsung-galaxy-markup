@@ -7,16 +7,31 @@ svg4everybody();
 const _init = {
 	initialization(){
 		_init._eventBinding();
+		_init._stopPreload();
 	},
 	_eventBinding(){
 		const mobileBtn = document.querySelector('#mobile-btn');
 		mobileBtn.addEventListener('click', ()=>{
-			const fixedMenu = document.querySelector('#mobile-menu');
-			fixedMenu.classList.toggle('open');
-			mobileBtn.classList.toggle('close');
+			const fixedMenu = $('#mobile-menu');
+			
+
+			if(fixedMenu.is(":visible")){
+				fixedMenu.fadeOut(600);
+				$body.css('overflow', 'auto');
+				mobileBtn.classList.remove('close');
+			} else{
+				fixedMenu.fadeIn(600);
+				$body.css('overflow', 'hidden');
+				mobileBtn.classList.add('close');
+			}
 		});
+
+
+	},
+	_stopPreload(){
+		$(".preloader-container").css('display','none');
 	}
 }
 
 
-$(document).ready(_init.initialization);
+$document.ready(_init.initialization); 

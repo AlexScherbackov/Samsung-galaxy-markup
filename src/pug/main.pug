@@ -1,3 +1,5 @@
+append vars
+	- pagination = ["1","2","3",{type: "etc", content:"..."},"посл."]
 main.main
 	div.container
 		div.main-content
@@ -71,3 +73,15 @@ main.main
 				div.advertising.sidebar__item
 					img.advertising__poster(src='../images/advertising-3.png')
 					span.advertising__title='Пример рекламного блока'
+
+
+	div.container
+		div.pagination
+			ul.pagination__list
+				each item in pagination
+					li.pagination__item
+						if(item.type)
+							span.pagination__etc=item.content
+						else
+							a.pagination__link(href="/")=item
+
